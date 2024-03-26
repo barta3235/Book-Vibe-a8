@@ -1,5 +1,10 @@
-import { useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveReadBooks } from "../../localstorageRead";
+import { getReadBooks } from "../../localstorageRead";
+import { saveWishBooks } from "../../localstorageRead";
+import { getWishBooks } from "../../localstorageRead";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const DetailBook = () => {
 
@@ -9,6 +14,28 @@ const DetailBook = () => {
 
     const post = useLoaderData();
     const thisbook = post.find((book) => book.bookId === intid);
+
+    const handleRead=()=>{
+        const savedReads= getReadBooks();
+        if(savedReads.includes(intid)){
+            toast("Already added to Reads, cannot process the same request twice");
+        }else{
+            saveReadBooks(intid);
+            toast("Added to Reads");
+        }
+    }
+    const handleWishList=()=>{
+        const savedReads= getReadBooks();
+        const savedwishes= getWishBooks();
+        if(savedReads.includes(intid)){
+            toast("The book is added as reads, you cannot wish list it | Request denied");
+        }else if(savedwishes.includes(intid)){
+            toast("The book is already added in you wish list");
+        }else{
+            saveWishBooks(intid);
+            toast("Added to you Wish List");
+        }
+    }
 
     return (
         <div className="flex flex-col md:flex-row gap-[50px] mb-[100px]">
@@ -57,14 +84,11 @@ const DetailBook = () => {
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-4">
-                     <button className="btn bg-white border rounded-lg btn-success">Read</button>
-                     <button className="btn bg-[#50B1C9] text-white border rounded-lg btn-success">Wishlist</button>
+                     <button onClick={handleRead} className="btn bg-white border rounded-lg btn-success">Read</button>
+                     <button onClick={handleWishList} className="btn bg-[#50B1C9] text-white border rounded-lg btn-success">Wishlist</button>
                 </div>
-
-
-
             </div>
-
+            <ToastContainer />
         </div>
     );
 };
