@@ -1,0 +1,80 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://i.ibb.co/TTGVPb7/no1.jpg",
+        "review": "The Great Gatsby is a timeless classic that delves deep into the decadence and disillusionment of the American Dream. Set in the Jazz Age of the 1920s, F. Scott Fitzgerald paints a vivid portrait of the extravagant and often morally bankrupt lives of the wealthy elite. Through the eyes of narrator Nick Carraway, readers are drawn into the world of Jay Gatsby, a mysterious millionaire who longs to reunite with his lost love, Daisy Buchanan. Themes of love, greed, and the pursuit of happiness are masterfully woven together in this tragic tale of ambition and longing.",
+        "totalPages": 180,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": ["Classic", "Romance", "Tragedy"],
+        "publisher": "Scribner",
+        "yearOfPublishing": 1925
+    },
+    {
+        "bookId": 2,
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "https://i.ibb.co/JpzjKsv/no2.jpg",
+        "review": "To Kill a Mockingbird is an insightful exploration of racial injustice and moral growth in the American South. Through the innocent eyes of Scout Finch, Harper Lee masterfully captures the essence of childhood curiosity and the harsh realities of prejudice. Set in the fictional town of Maycomb, Alabama during the 1930s, the novel follows the trial of Tom Robinson, a black man falsely accused of raping a white woman. Atticus Finch, Scout's father and a principled lawyer, stands as a beacon of integrity in the face of bigotry and hatred. With its timeless themes of empathy, compassion, and the fight for justice, To Kill a Mockingbird continues to resonate with readers of all ages.",
+        "totalPages": 324,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": ["Classic", "Social Justice", "Coming of Age"],
+        "publisher": "J.B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+    },
+    {
+        "bookId": 3,
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "https://i.ibb.co/fxbJzrN/no3.jpg",
+        "review": "The Catcher in the Rye is a poignant portrayal of adolescent alienation and rebellion. J.D. Salinger's iconic protagonist, Holden Caulfield, navigates the complexities of teenage angst and societal expectations in post-World War II America. Through Holden's introspective and often cynical narrative, Salinger explores themes of identity, authenticity, and the search for meaning in a world filled with phoniness. As Holden embarks on a journey of self-discovery through the streets of New York City, readers are invited to confront the universal struggles of growing up and the longing for connection in a disconnected world.",
+        "totalPages": 224,
+        "rating": 4.3,
+        "category": "Fiction",
+        "tags": ["Classic", "Coming of Age", "Teenage Angst"],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+    },
+    {
+        "bookId": 4,
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "https://i.ibb.co/mvMpGK7/no4.jpg",
+        "review": "1984 is a chilling dystopian novel that serves as a cautionary tale about totalitarianism and surveillance. Set in a bleak and oppressive future where the government monitors every aspect of its citizens' lives, George Orwell's masterpiece explores the dangers of unchecked power and the erosion of individual freedom. Through the eyes of protagonist Winston Smith, readers are thrust into a world where truth is subjective, and dissent is swiftly crushed. As Winston grapples with the oppressive regime of Big Brother and the ever-watchful Thought Police, Orwell paints a terrifying portrait of a society ruled by fear and propaganda. With its haunting parallels to contemporary political discourse, 1984 remains as relevant and unsettling as ever.",
+        "totalPages": 328,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": ["Dystopian", "Political", "Philosophical"],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+    },
+    {
+        "bookId": 5,
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://i.ibb.co/4SppmNW/no5.jpg",
+        "review": "Pride and Prejudice is a delightful comedy of manners that explores themes of love, class, and marriage in early 19th-century England. Jane Austen's timeless tale follows the spirited Elizabeth Bennet as she navigates the intricate social hierarchy of Regency society. From the moment she meets the enigmatic Mr. Darcy, readers are swept up in a whirlwind of misunderstandings, misgivings, and romantic tension. As Elizabeth and Darcy overcome their pride and prejudice to find true love, Austen delivers a witty and incisive commentary on the foibles of human nature and the complexities of romantic relationships. With its memorable characters and sparkling dialogue, Pride and Prejudice continues to captivate readers around the world.",
+        "totalPages": 432,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": ["Classic", "Romance", "Satire"],
+        "publisher": "T. Egerton, Whitehall",
+        "yearOfPublishing": 1813
+    },
+    {
+        "bookId": 6,
+        "bookName": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.ibb.co/QjJ6LzS/no6.jpg",
+        "review": "The Hobbit is an enchanting adventure that takes readers on a journey through Middle-earth, filled with magic and heroism. J.R.R. Tolkien's timeless tale follows the humble hobbit Bilbo Baggins as he is swept into an epic quest to reclaim the lost kingdom of Erebor from the fearsome dragon Smaug. Alongside a band of dwarves and the wise wizard Gandalf, Bilbo encounters trolls, goblins, and other fantastical creatures as he travels across the wild landscapes of Middle-earth. As Bilbo discovers courage and inner strength he never knew he possessed, readers are transported to a world of wonder and imagination. With its richly detailed world-building and unforgettable characters, The Hobbit remains a beloved classic of fantasy literature.",
+        "totalPages": 310,
+        "rating": 4.9,
+        "category": "Fantasy",
+        "tags": ["Adventure", "Middle-earth", "Quest"],
+        "publisher": "Allen & Unwin",
+        "yearOfPublishing": 1937
+    }
+]
