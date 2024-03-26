@@ -28,7 +28,7 @@ const Pagestoread = () => {
     };
 
     return (
-        <div className="bg-[#13131308] rounded-3xl flex justify-center items-center lg:p-[50px]">
+        <div className="bg-[#13131308] rounded-3xl flex justify-center items-center mx-[5px] md:mx-[0px] lg:p-[50px]">
             <BarChart
                 width={1000}
                 height={500}

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
-        <div className="navbar fixed z-10 px-[100px] bg-white">
+        <div className="navbar fixed z-10 md:px-[100px] bg-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden pl-0">
@@ -13,6 +13,8 @@ const Header = () => {
                        <NavLink to='/'>Home</NavLink>
                        <NavLink to='/listedbooks'>Listed Books</NavLink>
                        <NavLink to='/pagestoread'>Pages To Read</NavLink>
+                       <NavLink to='/'>Sign Up</NavLink>
+                       <NavLink to='/'>Sign In</NavLink>
                     </ul>
                 </div>
                 <a className="font-bold text-[28px]" href="/">Bookbing</a>
@@ -25,7 +27,7 @@ const Header = () => {
 
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end hidden md:flex">
                 <a className="btn mr-4 btn-success bg-[#23BE0A] text-white rounded-lg">Sign In</a>
                 <a className="btn btn-success bg-[#59C6D2] text-white rounded-lg">Sign Up</a>
             </div>
