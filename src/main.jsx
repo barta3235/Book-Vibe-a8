@@ -31,8 +31,9 @@ const router = createBrowserRouter([
         element: <Pagestoread></Pagestoread>
       },
       {
-        path:'/bookdetail',
-        element: <DetailBook></DetailBook>
+        path:'/bookdetail/:id',
+        element: <DetailBook></DetailBook>,
+        loader:({params})=> fetch('../public/book.json'),
       },
     ]
   },

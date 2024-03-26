@@ -6,7 +6,7 @@ import './hom.css'
 
 const Showbookinhome = ({eachbook}) => {
     return (
-        <Link to='/bookdetail' className="rounded-2xl p-6 border bg-base-100">
+        <Link to={`/bookdetail/${eachbook.bookId}`} className="rounded-2xl p-6 border bg-base-100">
             <div className=" flex justify-center">
                <img className="w-[326px] h-[326px] mb-[24px] rounded-2xl" src={eachbook.image} alt="" />
             </div>
