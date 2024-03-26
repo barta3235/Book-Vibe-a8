@@ -12,9 +12,9 @@ const ShowWishInListedBooks = ({book}) => {
             <div>
                 <h1 className='text-[24px] font-bold mb-[16px]'>{book.bookName}</h1>
                 <h1 className='mb-[16px] font-medium'>By: {book.author}</h1>
-                <div className='flex gap-4'>
+                <div className='flex flex-col md:flex-row gap-4'>
                     <h1 className="font-bold">Tags</h1>
-                    <div>
+                    <div className="flex flex-col md:flex-row">
                         {
                             book.tags.map((tag, idx) => <span className="mr-[16px] text-[#23BE0A] bg-base-200 rounded-[30px] text-center px-[16px] py-[7px] font-medium" key={idx}>#{tag}</span>)
                         }
@@ -25,7 +25,7 @@ const ShowWishInListedBooks = ({book}) => {
                     </div>
                 </div>
 
-                <div className='flex gap-[20px] my-[20px]'>
+                <div className='flex gap-[20px] my-[20px] flex-col md:flex-row'>
                         <div className='flex gap-2 justify-center items-center font-medium'>
                             <span className='text-2xl'><GoPeople /></span>
                             <h1>Publisher: {book.publisher}</h1>
@@ -39,7 +39,7 @@ const ShowWishInListedBooks = ({book}) => {
 
                 <hr />
 
-                <div className='mt-[17px] flex gap-[12px]'>
+                <div className='mt-[17px] flex gap-[12px] flex-col md:flex-row'>
                       <div className='px-[20px] text-center py-[11px] bg-[#328EFF26] rounded-[30px] text-[#328EFF] font-medium'>
                         <h1>Category: {book.category}</h1>
                       </div>

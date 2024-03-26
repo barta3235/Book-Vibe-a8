@@ -15,7 +15,7 @@ const showReadInListed = ({ book }) => {
                 <h1 className='mb-[16px] font-medium'>By: {book.author}</h1>
                 <div className='flex gap-4'>
                     <h1 className="font-bold">Tags</h1>
-                    <div>
+                    <div className="flex flex-col md:flex-row">
                         {
                             book.tags.map((tag, idx) => <span className="mr-[16px] text-[#23BE0A] bg-base-200 rounded-[30px] text-center px-[16px] py-[7px] font-medium" key={idx}>#{tag}</span>)
                         }
@@ -40,7 +40,7 @@ const showReadInListed = ({ book }) => {
 
                 <hr />
 
-                <div className='mt-[17px] flex gap-[12px]'>
+                <div className='mt-[17px] flex gap-[12px] flex-col lg:flex-row'>
                       <div className='px-[20px] text-center py-[11px] bg-[#328EFF26] rounded-[30px] text-[#328EFF] font-medium'>
                         <h1>Category: {book.category}</h1>
                       </div>

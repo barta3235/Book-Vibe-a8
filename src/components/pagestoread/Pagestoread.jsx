@@ -3,7 +3,7 @@
 const Pagestoread = () => {
     return (
         <div>
-            Pages to read
+            Pages to readd
         </div>
     );
 };
