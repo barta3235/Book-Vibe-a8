@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const showReadInListed = ({ book }) => {
     return (
+        
         <div className='flex flex-col md:flex-row gap-[25px] p-[24px] border-2 rounded-2xl mb-[24px]'>
             <div>
                 <img className='w-[230px] h-[230px] rounded-[16px]' src={book.image} alt="" />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Showbookinhome from "../../showbookinhome/Showbookinhome";
+import Showbookinhome from "../showbookinhome/Showbookinhome";
 
 const Home = () => {
 
