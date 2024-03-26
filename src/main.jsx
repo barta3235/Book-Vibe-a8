@@ -7,6 +7,7 @@ import Pagestoread from './components/pagestoread/Pagestoread.jsx';
 import DetailBook from './components/detailbook/DetailBook.jsx';
 import ReadInListed from './components/readInListed/ReadInListed.jsx';
 import WishListInListed from './components/wishListInListed/WishListInListed.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 
 import {
   createBrowserRouter,
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
