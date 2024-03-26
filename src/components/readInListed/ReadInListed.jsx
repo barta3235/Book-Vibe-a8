@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { getReadBooks } from "../../localstorageRead";
-import ShowReadInListed from "./ShowReadInListed";
+import ShowWishInListedBooks from "../wishListInListed/ShowWishInListedBooks";
+
 
 const ReadInListed = () => {
     const books= useLoaderData();
@@ -14,7 +15,7 @@ const ReadInListed = () => {
     return (
         <div className="">
             {
-                selectedBooks.map((book,idx)=> <ShowReadInListed key={idx} book={book}></ShowReadInListed> )
+                selectedBooks.map((book,idx)=> <ShowWishInListedBooks key={idx} book={book}></ShowWishInListedBooks> )
             }
         </div>
     );
