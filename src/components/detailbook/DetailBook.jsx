@@ -12,10 +12,10 @@ const DetailBook = () => {
 
     return (
         <div className="flex flex-col md:flex-row gap-[50px] mb-[100px]">
-            <div className="w-1/3">
-                <img className="w-[740px] h-[740px] rounded-2xl" src={thisbook.image} alt="" />
+            <div className="md:w-1/3 flex justify-center">
+                <img className="lg:w-[740px] lg:h-[740px] rounded-2xl" src={thisbook.image} alt="" />
             </div>
-            <div className="w-2/3">
+            <div className="md:w-2/3 mx-[10px] md:mx-0">
                 <h1 className="text-[40px] font-bold mb-[16px]">{thisbook.bookName}</h1>
                 <h1 className="text-[20px] font-medium mb-[24px]">By: {thisbook.author}</h1>
                 <hr />
