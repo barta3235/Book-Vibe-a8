@@ -5,6 +5,8 @@ import Root from './components/root/Root.jsx'
 import Listedbooks from './components/listedbooks/Listedbooks.jsx';
 import Pagestoread from './components/pagestoread/Pagestoread.jsx';
 import DetailBook from './components/detailbook/DetailBook.jsx';
+import ReadInListed from './components/readInListed/ReadInListed.jsx';
+import WishListInListed from './components/wishListInListed/WishListInListed.jsx';
 
 import {
   createBrowserRouter,
@@ -24,7 +26,18 @@ const router = createBrowserRouter([
       },
       {
         path:'/listedbooks',
-        element: <Listedbooks></Listedbooks>
+        element: <Listedbooks></Listedbooks>,
+        children:[
+          {
+            index:true,
+            element: <ReadInListed></ReadInListed>,
+            loader:()=> fetch('../public/book.json'),
+          },
+          {
+            path:'wishlist',
+            element: <WishListInListed></WishListInListed>,
+          }
+        ]
       },
       {
         path:'/pagestoread',
