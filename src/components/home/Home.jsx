@@ -8,7 +8,7 @@ const Home = () => {
    const [allbooks,setAllbook]=useState([]);
    
    useEffect(()=>{
-      fetch('../../../public/book.json')
+      fetch('/book.json')
       .then(res=> res.json())
       .then(data=> setAllbook(data));
    },[])

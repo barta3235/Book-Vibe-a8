@@ -34,24 +34,24 @@ const router = createBrowserRouter([
           {
             index:true,
             element: <ReadInListed></ReadInListed>,
-            loader:()=> fetch('../public/book.json'),
+            loader:()=> fetch('/book.json'),
           },
           {
             path:'wishlist',
             element: <WishListInListed></WishListInListed>,
-            loader:()=> fetch('../public/book.json'),
+            loader:()=> fetch('/book.json'),
           }
         ]
       },
       {
         path:'/pagestoread',
         element: <Pagestoread></Pagestoread>,
-        loader:()=> fetch('../public/book.json'),
+        loader:()=> fetch('/book.json'),
       },
       {
         path:'/bookdetail/:id',
         element: <DetailBook></DetailBook>,
-        loader:()=> fetch('../public/book.json'),
+        loader:()=> fetch('/book.json'),
       },
       {
         path:'/aboutus',
