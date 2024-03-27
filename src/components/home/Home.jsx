@@ -4,9 +4,8 @@ import Showbookinhome from "../showbookinhome/Showbookinhome";
 import './home.css'
 
 const Home = () => {
-
    const [allbooks,setAllbook]=useState([]);
-   
+
    useEffect(()=>{
       fetch('/book.json')
       .then(res=> res.json())
@@ -28,6 +27,9 @@ const Home = () => {
             </div>
 
             <h1 className="text-center mb-[36px] text-[40px] font-bold">Books</h1>
+            {
+                
+            }
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {

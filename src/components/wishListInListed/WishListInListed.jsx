@@ -1,11 +1,15 @@
 import { getWishBooks } from "../../localstorageRead";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import ShowWishInListedBooks from "./ShowWishInListedBooks";
+import Loader from "../loader/Loader";
 
 const WishListInListed = () => {
+    const navigation= useNavigation();
     const books= useLoaderData();
     const localId=getWishBooks();
     console.log(localId);
+
+    if(navigation.state=== 'loading') return <Loader></Loader>
 
     const selectedBooks= books.filter((book)=>localId.includes(book.bookId));
 

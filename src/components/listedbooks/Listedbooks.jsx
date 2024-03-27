@@ -16,7 +16,7 @@ const Listedbooks = () => {
                 {/* dropdown */}
                 <div className="flex justify-center items-center mb-[60px]">
                     <details className="dropdown flex justify-center items-center w-[120px]">
-                        <summary className="m-1 btn bg-[#23BE0A] text-white btn-success"><h1>Sort By </h1><h1 className="text-2xl"><MdKeyboardArrowDown /></h1>
+                        <summary className="m-1 btn bg-[#23BE0A] text-white btn-success p-2"><h1>Sort By </h1><h1 className="text-2xl"><MdKeyboardArrowDown /></h1>
                         </summary>
                         <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                             <li><a>Rating</a></li>
@@ -30,7 +30,7 @@ const Listedbooks = () => {
 
 
             {/* listed books */}
-            <div className="flex items-center overflow-x-auto overflow-y-hidden  flex-nowrap dark:bg-gray-100 dark:text-gray-800">
+            <div className="flex items-center overflow-x-auto overflow-y-hidden  flex-nowrap dark:bg-gray-100 dark:text-gray-800 mx-[5px]">
 
                 <Link to='' onClick={() => setTabIndex(0)}
                     className={`flex items-center flex-shrink-0 md:px-5 py-3 space-x-2 ${tabIndex === 0 ? 'border border-b-0' : 'border-b'} rounded-t-lg dark:border-gray-600 dark:text-gray-900`}>

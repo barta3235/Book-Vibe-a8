@@ -8,7 +8,6 @@ import DetailBook from './components/detailbook/DetailBook.jsx';
 import ReadInListed from './components/readInListed/ReadInListed.jsx';
 import WishListInListed from './components/wishListInListed/WishListInListed.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
-import AboutUs from './components/aboutus/AboutUs.jsx';
 import Home from './components/home/Home.jsx';
 
 import {
@@ -53,10 +52,6 @@ const router = createBrowserRouter([
         element: <DetailBook></DetailBook>,
         loader:()=> fetch('/book.json'),
       },
-      {
-        path:'/aboutus',
-        element: <AboutUs></AboutUs>,
-      }
     ]
   },
 ]);
