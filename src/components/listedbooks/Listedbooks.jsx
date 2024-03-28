@@ -22,7 +22,7 @@ const Listedbooks = () => {
         }
     }, [val]);
 
-    console.log('dd:',val)
+    // console.log('dd:',val)
 
     return (
         <div >
