@@ -1,7 +1,11 @@
 import { useLoaderData,useNavigation } from "react-router-dom";
 import { getReadBooks } from "../../localstorageRead";
-import ShowWishInListedBooks from "../wishListInListed/ShowWishInListedBooks";
+import ShowR from "./ShowR";
 import Loader from "../loader/Loader";
+import { useContext, useState } from "react";
+import { sortContext } from "../listedbooks/Listedbooks";
+import { useEffect } from "react";
+
 
 
 const ReadInListed = () => {
@@ -9,16 +13,28 @@ const ReadInListed = () => {
     const books= useLoaderData();
     const localId=getReadBooks();
     console.log(localId);
+
+    const sortval= useContext(sortContext);
+    console.log('yikes1:',sortval);
+
+    const [herebooks,setHerebooks]=useState([]);
+
+    useEffect(()=>{
+        const selectedBooks= books.filter((book)=>localId.includes(book.bookId));
+        setHerebooks(selectedBooks);
+    },[])
+
+    
     
     if(navigation.state=== 'loading') return <Loader></Loader>
 
-    const selectedBooks= books.filter((book)=>localId.includes(book.bookId));
+    
 
 
     return (
-        <div className="">
+        <div>
             {
-                selectedBooks.map((book,idx)=> <ShowWishInListedBooks key={idx} book={book}></ShowWishInListedBooks> )
+                herebooks.map((book)=> <ShowR key={book.bookId} book={book}></ShowR>)
             }
         </div>
     );

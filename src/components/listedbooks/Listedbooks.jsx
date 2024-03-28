@@ -1,12 +1,28 @@
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { useEffect } from 'react';
 
+export const sortContext = createContext('sort');
 
 const Listedbooks = () => {
 
     const [tabIndex, setTabIndex] = useState(0);
+    const [val, setVal] = useState('');
+
+
+    const handleSort = (value) => {
+           setVal(value)    
+    }
+
+    useEffect(() => {
+        if (val !== '') {
+            console.log('updated');
+        }
+    }, [val]);
+
+    console.log('dd:',val)
 
     return (
         <div >
@@ -19,9 +35,9 @@ const Listedbooks = () => {
                         <summary className="m-1 btn bg-[#23BE0A] text-white btn-success p-2"><h1>Sort By </h1><h1 className="text-2xl"><MdKeyboardArrowDown /></h1>
                         </summary>
                         <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                            <li><a>Rating</a></li>
-                            <li><a>Number of Pages</a></li>
-                            <li><a>Published Year</a></li>
+                            <li onClick={()=>handleSort('rating')}><a>Rating</a></li>
+                            <li onClick={()=>handleSort('noOfPages')}><a>Number of Pages</a></li>
+                            <li onClick={()=>handleSort('publishedYear')}><a>Published Year</a></li>
                         </ul>
                     </details>
                 </div>
@@ -50,9 +66,13 @@ const Listedbooks = () => {
                 </Link>
             </div>
 
-            <div className='mt-[32px] mb-[76px]'>
-                <Outlet></Outlet>
-            </div>
+            <sortContext.Provider value={val}>
+
+                <div className='mt-[32px] mb-[76px]'>
+                    <Outlet></Outlet>
+                </div>
+
+            </sortContext.Provider>
 
 
 
